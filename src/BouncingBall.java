@@ -2,7 +2,7 @@
 *  Compilation:  javac BouncingBall.java
 *  Execution:    java BouncingBall
 *  Dependencies: StdDraw.java from http://introcs.cs.princeton.edu/java/15inout/StdDraw.java
-*  Author: 		 Rodrigo Costa 
+*  Author:       Rodrigo Costa 
 *  
 *  Code based on http://introcs.cs.princeton.edu/java/15inout/BouncingBall.java but upgraded to include
 *  proper physics using the Euler step method.
@@ -18,7 +18,7 @@ public class BouncingBall {
        double L = 0.55;
        double dt = 0.00001;
        double step = 1/dt;
-       double framerate = 1/dt*2;
+       double framerate = 1/dt*5;
        int n=0;
        
       
@@ -28,7 +28,7 @@ public class BouncingBall {
  
         // initial values
         double rx1 = 0.1, ry1 = 0.1;     // position
-        double vx1 = -0.007, vy1 = -0.0012;     // velocity
+        double vx1 = -0.007, vy1 = -0.012;     // velocity
         double radius1 = 0.05;              // radius
         double m1 = 1;                                        // mass
        
@@ -37,7 +37,7 @@ public class BouncingBall {
         double radius2 = 0.05;              // radius
         double m2 = 10;                                        // mass
        
-        // initial values colision
+        // initial values collision
         double phy = 0;
         double theta1 = 0;
         double theta2 = 0;
@@ -84,10 +84,12 @@ public class BouncingBall {
                		}*/
 
 
-            	   
+            	   // system out - in order to have control of the collisions
             	   n = n+1;
             	   System.out.println("COL: "+n+" rx1: "+rx1+" rx2: "+rx2+" ry1: "+ry1+" ry2: "+ry2+" vx1: "+vx1+" vx2: "+vx2+" vy1: "+vy1+" vx2: "+vy2);
             	   
+            	   
+             // Math to calculate new speeds for each particle
             	   
              phy = Math.atan2((ry1-ry2),(rx1-rx2));
              theta1 = Math.atan2(vy1,vx1);
