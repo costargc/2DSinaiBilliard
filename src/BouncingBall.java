@@ -68,7 +68,7 @@ public class BouncingBall {
                //check if ball are getting close
                if (Math.sqrt(Math.pow(rx1-rx2, 2)+Math.pow(ry1-ry2, 2))< checkstep ){
             	   
-            	   //resolve collision (when remove one from inside the other)...
+            	  //resolve collision (remove one from inside the other WORK IN PROGRESS)...
             	  /* while(Math.sqrt(Math.pow(rx1-rx2, 2)+Math.pow(ry1-ry2, 2))<=radius1+radius2){
             	  
                    rx1 = rx1 - 0.1*dt*vx1;
@@ -89,7 +89,7 @@ public class BouncingBall {
             	   System.out.println("COL: "+n+" rx1: "+rx1+" rx2: "+rx2+" ry1: "+ry1+" ry2: "+ry2+" vx1: "+vx1+" vx2: "+vx2+" vy1: "+vy1+" vx2: "+vy2);
             	   
             	   
-             phy = Math.atan2(Math.abs(ry2-ry1),Math.abs(rx1-rx2));
+             phy = Math.atan2((ry1-ry2),(rx1-rx2));
              theta1 = Math.atan2(vy1,vx1);
              theta2 = Math.atan2(vy2,vx2);
              
