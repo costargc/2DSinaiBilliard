@@ -16,14 +16,15 @@ public class BouncingBall {
  
         // set the scale of the coordinate system
        double L = 0.55;
+       double LS = 0.55+0.05;
        double dt = 0.00001;
        double step = 1/dt;
        double framerate = 1/dt*5;
        int n=0;
        
       
-        StdDraw.setXscale(-L, L);
-        StdDraw.setYscale(-L, L);
+        StdDraw.setXscale(-LS, LS);
+        StdDraw.setYscale(-LS, LS);
         //StdDraw.enableDoubleBuffering();
  
         // initial values
@@ -128,6 +129,8 @@ public class BouncingBall {
             if ((step%(int)framerate) == 0){
             // clear the background
             StdDraw.clear(StdDraw.WHITE);
+            StdDraw.setPenColor(StdDraw.BLACK);
+            StdDraw.square(0, 0, L);
  
             // draw ball on the screen
             StdDraw.setPenColor(StdDraw.BLUE);
