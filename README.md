@@ -1,4 +1,4 @@
-# Sinai Billiard with 2D Bouncing Ball on ball elastic collusion.
+# Sinai Billiard with 2D Bouncing Ball (ball on ball elastic collision).
 This code was based on the simplified version found in http://introcs.cs.princeton.edu/java/15inout/BouncingBall.java but 
 upgraded to include proper physics on ball to ball elastic collisions using the Euler step method.
 
