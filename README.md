@@ -5,3 +5,4 @@ upgraded to include proper physics on ball to ball elastic collisions using the 
 The idea is to use this as a live demo reference for Prof. Dr. Mário José de Oliveira seminar on 
 "Equipartição da Energia, Bilhar de Sinai e Movimento Browniano" found in http://fig.if.usp.br/~oliveira/perrin.pdf
 
+![alt text](https://github.com/costargc/2DSinaiBilliard/blob/master/2DSinaiBilliard.gif)
